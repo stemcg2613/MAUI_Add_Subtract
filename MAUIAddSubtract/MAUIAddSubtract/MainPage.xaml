@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIAddSubtract.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="15">
+
+            <Label
+                Text="Steven McGraw Add and Subtract"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="First Value" />
+
+            <Entry
+                x:Name="FirstValueEntry"
+                Placeholder="Enter first value"
+                Keyboard="Numeric" />
+
+            <Label
+                Text="Second Value" />
+
+            <Entry
+                x:Name="SecondValueEntry"
+                Placeholder="Enter second value"
+                Keyboard="Numeric" />
+
+            <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="10">
+
+                <Button
+                    Grid.Column="0"
+                    Text="Addition"
+                    Clicked="OnAdditionClicked" />
+
+                <Button
+                    Grid.Column="1"
+                    Text="Subtraction"
+                    Clicked="OnSubtractionClicked" />
+
+            </Grid>
+
+            <Label
+                x:Name="MessageLabel"
+                Text=""
+                FontSize="24" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
